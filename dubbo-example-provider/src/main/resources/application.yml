@@ -1,0 +1,10 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: dubbo-example-provider
+  dubbo:
+    appname: ${spring.application.name}
+    registry: zookeeper://127.0.0.1:2181
+    protocol: dubbo
