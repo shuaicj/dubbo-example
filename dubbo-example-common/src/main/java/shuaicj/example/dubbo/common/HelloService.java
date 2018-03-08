@@ -7,5 +7,5 @@ package shuaicj.example.dubbo.common;
  */
 public interface HelloService {
 
-    String hello(String name);
+    Hello hello(String name);
 }

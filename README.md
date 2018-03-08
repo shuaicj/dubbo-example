@@ -29,7 +29,7 @@ curl http://localhost:8080/hello?name=shuaicj
 ```
 and you should see:
 ```bash
-Hello shuaicj!
+{"id":0,"message":"Hello shuaicj!"}
 ```
 
 ### Modules
