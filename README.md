@@ -1,4 +1,4 @@
-# Dubbo Example
+# Spring Boot Dubbo Example
 
 A simple demo of dubbo and spring boot.
 
@@ -15,7 +15,8 @@ zkServer start
 ```bash
 mvn clean package
 ```
-> If your zookeeper is not running at `127.0.0.1:2181`, change the property `spring.dubbo.registry` in `application.yml` of both provider and consumer before you call `mvn`.
+> If your zookeeper is not running at `127.0.0.1:2181`, change the property `spring.dubbo.registry`
+> in `application.yml` of both provider and consumer before you call `mvn`.
 
 3. Start provider and consumer:
 ```bash
