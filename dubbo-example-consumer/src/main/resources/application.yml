@@ -1,10 +1,15 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
     name: dubbo-example-consumer
-  dubbo:
-    appname: ${spring.application.name}
-    registry: zookeeper://127.0.0.1:2181
-    protocol: dubbo
+
+dubbo:
+  registry:
+#    address: N/A
+      address: zookeeper://127.0.0.1:2181
+  #    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+  protocol:
+    name: dubbo
+    port: 12345

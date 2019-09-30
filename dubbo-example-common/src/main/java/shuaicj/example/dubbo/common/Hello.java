@@ -25,4 +25,12 @@ public class Hello implements Serializable {
     public String getMessage() {
         return message;
     }
+
+    @Override
+    public String toString() {
+        return "Hello{"
+                + "id=" + id
+                + ", message='" + message + '\''
+                + '}';
+    }
 }

@@ -2,8 +2,7 @@ package shuaicj.example.dubbo.provider.service;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.alibaba.dubbo.config.annotation.Service;
-import org.springframework.stereotype.Component;
+import org.apache.dubbo.config.annotation.Service;
 import shuaicj.example.dubbo.common.Hello;
 import shuaicj.example.dubbo.common.HelloService;
 
@@ -13,7 +12,6 @@ import shuaicj.example.dubbo.common.HelloService;
  * @author shuaicj 2018/03/05
  */
 @Service(interfaceClass = HelloService.class)
-@Component
 public class HelloServiceImpl implements HelloService {
 
     private static final AtomicLong counter = new AtomicLong();

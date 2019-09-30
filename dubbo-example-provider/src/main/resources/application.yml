@@ -1,10 +1,17 @@
-server:
-  port: 9090
+#server:
+#  port: 9090
 
 spring:
   application:
     name: dubbo-example-provider
-  dubbo:
-    appname: ${spring.application.name}
-    registry: zookeeper://127.0.0.1:2181
-    protocol: dubbo
+
+dubbo:
+  registry:
+#    address: N/A
+    address: zookeeper://127.0.0.1:2181
+#    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+  protocol:
+    name: dubbo
+    port: 12345
+#  scan:
+#    base-packages: shuaicj.example.dubbo.provider.service

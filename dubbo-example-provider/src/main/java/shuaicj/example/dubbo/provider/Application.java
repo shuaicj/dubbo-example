@@ -1,6 +1,6 @@
 package shuaicj.example.dubbo.provider;
 
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author shuaicj 2018/03/05
  */
 @SpringBootApplication
-@EnableDubboConfiguration
+@EnableDubbo(scanBasePackages = "shuaicj.example.dubbo.provider.service")
 public class Application {
 
     public static void main(String[] args) {
