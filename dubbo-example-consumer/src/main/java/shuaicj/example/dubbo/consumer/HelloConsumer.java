@@ -1,4 +1,4 @@
-package shuaicj.example.dubbo.consumer.runner;
+package shuaicj.example.dubbo.consumer;
 
 import org.apache.dubbo.config.annotation.Reference;
 import org.slf4j.Logger;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import shuaicj.example.dubbo.common.HelloService;
 
 /**
- * The runner to consume the service.
+ * The consumer.
  *
  * @author shuaicj 2019/09/29
  */
@@ -17,7 +17,7 @@ public class HelloConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(HelloConsumer.class);
 
-    @Reference
+    @Reference(version = "${helloService.version}")
     private HelloService helloService;
 
     @Scheduled(fixedDelay = 1000)

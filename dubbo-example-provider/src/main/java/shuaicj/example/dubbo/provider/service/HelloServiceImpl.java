@@ -11,7 +11,7 @@ import shuaicj.example.dubbo.common.HelloService;
  *
  * @author shuaicj 2018/03/05
  */
-@Service(interfaceClass = HelloService.class)
+@Service(version = "${helloService.version}")
 public class HelloServiceImpl implements HelloService {
 
     private static final AtomicLong counter = new AtomicLong();

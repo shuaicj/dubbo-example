@@ -15,7 +15,7 @@ zkServer start
 ```bash
 mvn clean package
 ```
-> If your zookeeper is not running at `127.0.0.1:2181`, change the property `spring.dubbo.registry`
+> If your zookeeper is not running at `127.0.0.1:2181`, change the property `dubbo.registry.address`
 > in `application.yml` of both provider and consumer before you call `mvn`.
 
 3. Start provider and consumer:
@@ -24,13 +24,12 @@ java -jar *provider/target/*.jar
 java -jar *consumer/target/*.jar
 ```
 
-4. Verify consumer service:
+4. Verify the logging messages of the consumer, and you would see things like:
 ```bash
-curl http://localhost:8080/hello?name=shuaicj
-```
-and you should see:
-```bash
-{"id":0,"message":"Hello shuaicj!"}
+call HelloService: {"id":0,"message":"Hello shuaicj!"}
+call HelloService: {"id":1,"message":"Hello shuaicj!"}
+...
+
 ```
 
 ### Modules
@@ -39,5 +38,7 @@ and you should see:
 - **dubbo-example-consumer** - consume the dubbo service
 
 ### Reference
-- [dubbo-spring-boot-starter](https://github.com/alibaba/dubbo-spring-boot-starter)
+- https://dubbo.apache.org
+- https://github.com/apache/dubbo
+- https://github.com/apache/dubbo-spring-boot-project
 
